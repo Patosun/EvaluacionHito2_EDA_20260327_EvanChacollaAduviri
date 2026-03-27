@@ -33,7 +33,7 @@ void registrar(string nom, string cod) {
 
 void atender() {
     if (cabeza == NULL) {
-        cout << "No hay estudiantes en espera." << endl;
+        cout << "No hay estudiantes esperando" << endl;
         return;
     }
 
@@ -53,13 +53,13 @@ void atender() {
 
 void mostrar() {
     if (cabeza == NULL) {
-        cout << "No hay estudiantes en espera." << endl;
+        cout << "No hay estudiantes esperando" << endl;
         return;
     }
 
     Nodo* aux = cabeza;
     int i = 1;
-    cout << "Estudiantes en espera:" << endl;
+    cout << "Estudiantes esperando:" << endl;
     while (aux != NULL) {
         cout << i << ". " << aux->nombre << " - " << aux->codigo << endl;
         aux = aux->sig;
@@ -69,7 +69,7 @@ void mostrar() {
 
 void buscar(string nom) {
     if (cabeza == NULL) {
-        cout << "No hay estudiantes en espera." << endl;
+        cout << "No hay estudiantes esperando" << endl;
         return;
     }
 
@@ -79,7 +79,7 @@ void buscar(string nom) {
 
     while (aux != NULL) {
         if (aux->nombre == nom) {
-            cout << "Encontrado en posicion " << pos << ": " << aux->nombre << " - " << aux->codigo << endl;
+            cout << "Estudiante en posicion:  " << pos << ": " << aux->nombre << " - " << aux->codigo << endl;
             encontrado = true;
         }
         aux = aux->sig;
@@ -87,13 +87,13 @@ void buscar(string nom) {
     }
 
     if (!encontrado) {
-        cout << "No se encontro el estudiante." << endl;
+        cout << "No existe el estudiante" << endl;
     }
 }
 
 void mostrarInverso() {
     if (cola == NULL) {
-        cout << "No hay estudiantes en espera." << endl;
+        cout << "No hay estudiante esperando" << endl;
         return;
     }
 
@@ -110,7 +110,7 @@ int main() {
     string nombre, codigo;
 
     do {
-        cout << "\n--- Menu ---" << endl;
+        cout << "\n Menu " << endl;
         cout << "1. Registrar estudiante" << endl;
         cout << "2. Atender estudiante" << endl;
         cout << "3. Mostrar estudiantes en espera" << endl;
